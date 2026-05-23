@@ -25,11 +25,11 @@ Custom standalone GKash payment gateway integration for PHP 5.6 environments, de
 - `cache/` stores order and replay state for the demo flow
 - `logs/` stores daily gateway logs
 
-## Legacy file mapping
+## Legacy Flow Refactoring
 
-- `lib/gkash.php` -> `src/GKashClient.php`, `src/GKashCallbackHandler.php`, `src/GKashSignature.php`
-- `payment-process-new.php` -> `src/GKashCheckout.php` and `public/checkout.php`
-- `thankyou-gkash.php` -> `public/return.php`
+- Refactored legacy gateway logic into structured service classes for payment requests, callback validation, and signature generation.
+- Migrated checkout processing into dedicated checkout handlers and public payment entry points.
+- Separated payment return and success response handling into standalone public callback endpoints.
 
 ## Installation
 
