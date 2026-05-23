@@ -1,0 +1,8 @@
+config/gkash.local.php
+logs/
+cache/*
+!cache/.gitkeep
+!cache/orders/.gitkeep
+!cache/replay/.gitkeep
+*.log
+
