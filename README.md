@@ -1,6 +1,6 @@
 # GKash PHP Gateway
 
-Standalone, PHP 5.6-compatible GKash payment integration rebuilt from the legacy `payment-process-new.php`, `lib/gkash.php`, and `thankyou-gkash.php` flow.
+Custom standalone GKash payment gateway integration for PHP 5.6 environments, designed with a modular payment processing flow including request handling, gateway communication, and payment success callback management.
 
 ## What is included
 
