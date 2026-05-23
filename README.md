@@ -12,6 +12,7 @@ Standalone, PHP 5.6-compatible GKash payment integration rebuilt from the legacy
 - Lightweight daily logging
 - Sample checkout form
 - Success and failure pages
+- Hash tester utility page
 
 ## Repository layout
 
@@ -109,6 +110,19 @@ Fields supported:
 - Remark
 - Custom Parameter
 
+## Hash tester utility
+
+Open `examples/hash-tester.php` to test the SHA512 strings used by GKash.
+
+Use it to verify:
+
+- checkout signature generation
+- callback signature generation
+- amount formatting with `AmountWithoutDot`
+- whether `Status` is treated as successful
+
+This is useful before plugging real merchant credentials into a live gateway.
+
 ## Demo mode
 
 If no checkout endpoint is configured, the sample flow falls back to local demo mode so the repository still behaves like a full payment walkthrough without real merchant credentials.
@@ -127,4 +141,3 @@ Logs are written daily under `logs/`.
 - If callback verification fails, compare `SignatureKey`, `CID`, and amount formatting
 - If return page shows waiting, confirm that the callback reached `public/callback.php`
 - If requery fails, confirm `query_endpoint` and network access
-
